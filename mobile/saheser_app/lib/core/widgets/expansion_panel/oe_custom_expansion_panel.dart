@@ -7,17 +7,15 @@ class OeExpansionPanel extends StatefulWidget {
   final Color backgroundColor;
   final Function(int) onLastExpandedIndex;
 
-  const OeExpansionPanel({Key key, this.listExpansion, this.onLastExpandedIndex, this.backgroundColor}) : super(key: key);
+  const OeExpansionPanel({Key? key, required this.listExpansion, required this.onLastExpandedIndex, required this.backgroundColor}) : super(key: key);
 
   @override
   _OeExpansionPanelState createState() => _OeExpansionPanelState();
 }
 
 class _OeExpansionPanelState extends State<OeExpansionPanel> {
-  ThemeData themeData;
   @override
   Widget build(BuildContext context) {
-    themeData = Theme.of(context);
     return ExpansionPanelList(
       dividerColor: GlobalConstant.fontColorAlternative,
       expandedHeaderPadding: EdgeInsets.all(0),

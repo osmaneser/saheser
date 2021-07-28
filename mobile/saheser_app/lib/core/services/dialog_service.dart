@@ -6,13 +6,13 @@ import '../widgets/oe_button.dart';
 
 class DialogService {
   static Future<void> confirmDialog(
-      {String title,
-      @required Widget content,
-      BuildContext context,
+      {required String title,
+      required Widget content,
+      required BuildContext context,
       bool onlyCancelButton = false,
-      String confirmText,
+      required String confirmText,
       String cancelText = "Kapat",
-      Function onTap}) {
+      void Function()? onTap}) {
     return showDialog(
       context: context,
       useRootNavigator: false,
@@ -45,7 +45,7 @@ class DialogService {
                       ? SizedBox()
                       : Expanded(
                           child: OeButton(
-                            onTap: onTap,
+                            onTap: ()=> onTap,
                             text: confirmText,
                             color: themeData.primaryColor,
                           ),
@@ -60,20 +60,19 @@ class DialogService {
   }
 
   static Future<void> alertDialog({
-    @required  BuildContext context,
-    @required String message,
+    required  BuildContext context,
+    required String message,
     String confirmButtonText = "Tamam",
     String cancelButtonText = "Kapat",
-    int duration,
 
     ///
     /// Kapat buttonu gösterir
     /// Varsayılan true
     ///
     bool showCloseButton = true,
-    @required EnumAlertType type,
-    Function onConfirmTap,
-    Function onCloseTap,
+    required EnumAlertType type,
+    void Function()? onConfirmTap,
+    void Function()? onCloseTap,
   }) async {
     ThemeData themeData = Theme.of(context);
     showDialog(
@@ -131,7 +130,7 @@ class DialogService {
                                 type == EnumAlertType.Question
                                     ? Expanded(
                                         child: OeButton(
-                                          onTap: onConfirmTap != null ? onConfirmTap : () {},
+                                          onTap: () => onConfirmTap,
                                           text: confirmButtonText,
                                           color: themeData.accentColor,
                                         ),
@@ -146,10 +145,6 @@ class DialogService {
             ),
           );
         });
-    if (!showCloseButton) {
-      await Future.delayed(Duration(milliseconds: duration));
-      Navigator.pop(context);
-    }
   }
 
   static _getColorByAlertType(EnumAlertType type) {

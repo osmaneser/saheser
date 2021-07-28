@@ -1,4 +1,4 @@
-package com.example.saheser_app
+package com.saheser_lokantasi
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -7,15 +7,15 @@ import 'radio_button_item.dart';
 class OeRadioButton extends StatefulWidget {
   final List<RadioButtonItem> listRadioGroup;
   final Function onChanged;
-  final int initValue;
   final bool isShowLabel;
   final String labelText;
-  final TextStyle labelStyle;
+  final TextStyle? labelStyle;
+  final int? initValue;
 
   const OeRadioButton(
-      {Key key,
-      @required this.listRadioGroup,
-      @required this.onChanged,
+      {Key? key,
+      required this.listRadioGroup,
+      required this.onChanged,
       this.labelText = "Varsayılan",
       this.labelStyle,
       this.isShowLabel = true, this.initValue})
@@ -27,7 +27,7 @@ class OeRadioButton extends StatefulWidget {
 class _OeRadioButtonState extends State<OeRadioButton> {
   dynamic _radioValue;
 
-  ThemeData themeData;
+  ThemeData? themeData;
 
   @override
   void initState() {

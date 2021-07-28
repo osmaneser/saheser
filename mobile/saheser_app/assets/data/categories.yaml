@@ -1,0 +1,35 @@
+  categories:
+  - id: 1
+    name: Sulu Yemekler
+    imgUrl: https://osmaneser.com/saheser/category/sulu.jpg
+  - id: 2
+    name: Kebaplar
+    imgUrl: https://osmaneser.com/saheser/category/kebab.jpg
+  - id: 3
+    name: İçecekler
+    imgUrl: https://osmaneser.com/saheser/category/icecek.jpg
+  - id: 4
+    name: Çorbalar
+    imgUrl: https://osmaneser.com/saheser/category/corba.jpg
+  - id: 5
+    name: Tatlılar
+    imgUrl: https://osmaneser.com/saheser/category/tatli.jpg
+  - id: 6
+    name: Et Yemekleri
+    imgUrl: https://osmaneser.com/saheser/category/et.jpg
+  - id: 7
+    name: Köfte Yemekleri
+    imgUrl: https://osmaneser.com/saheser/category/kofte.jpg
+  - id: 8
+    name: Kuzu Yemekleri
+    imgUrl: https://osmaneser.com/saheser/category/kuzu.jpg
+  - id: 9
+    name: Pideler
+    imgUrl: https://osmaneser.com/saheser/category/pide.jpg
+  - id: 10
+    name: Soğuk
+    imgUrl: https://osmaneser.com/saheser/category/soguk.jpg
+  - id: 11
+    name: Yan Ürünler
+    imgUrl: https://osmaneser.com/saheser/category/yan.jpg
+  

@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.saheser_app">
+    package="com.saheser_lokantasi">
+   <uses-permission android:name="android.permission.INTERNET"/> <!-- Add this -->
    <application
-        android:label="saheser_app"
+        android:label="Şaheser"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

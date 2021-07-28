@@ -4,20 +4,20 @@ import '../constants/custom_enums.dart';
 import '../constants/global_constants.dart';
 
 class OeButton extends StatelessWidget {
-  final Function onTap;
+  final void Function() onTap;
   final String text;
-  final EnumButtonType buttonType;
-  final Color color;
-  final Color textColor;
+  final EnumButtonType? buttonType;
+  final Color? color;
+  final Color? textColor;
   final bool isDisabled;
-  final double customHeight;
+  final double? customHeight;
   final bool hasBorder;
   final bool isLoading;
 
   const OeButton({
-    Key key,
-    @required this.onTap,
-    @required this.text,
+    Key? key,
+    required this.onTap ,
+    required this.text,
     this.buttonType,
     this.color,
     this.textColor,

@@ -4,7 +4,7 @@ import 'package:saheser_app/core/widgets/oe_custom_circular_spinner.dart';
 import 'package:saheser_app/core/widgets/oe_custom_content_text.dart';
 
 class LoadingService {
-  static loadingScreen({BuildContext context, @required bool isOpen, String message = "Yükleniyor..."}) async {
+  static loadingScreen({required BuildContext context, required bool isOpen, String message = "Yükleniyor..."}) async {
     if (isOpen) {
       return showDialog(
         useRootNavigator: false,

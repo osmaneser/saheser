@@ -7,7 +7,7 @@ class BaseViewModel with ChangeNotifier {
 
   String message = "";
 
-  get state => _state;
+  BaseState get state => _state;
 
   set state(BaseState value) {
     _state = value;

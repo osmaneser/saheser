@@ -3,7 +3,7 @@ import '../constants/global_constants.dart';
 
 class CustomTitleText extends StatelessWidget {
   final String text;
-  const CustomTitleText({Key key, @required this.text}) : super(key: key);
+  const CustomTitleText({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +12,7 @@ class CustomTitleText extends StatelessWidget {
       style: TextStyle(
         color: GlobalConstant.fontColorLive,
         fontSize: 12,
+        fontWeight: FontWeight.bold
       ),
     );
   }

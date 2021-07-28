@@ -3,8 +3,8 @@ import '../constants/global_constants.dart';
 
 class OeCustomAppBar extends StatelessWidget {
   final Widget title;
-  final Function onBackButton;
-  const OeCustomAppBar({Key key, this.title, this.onBackButton}) : super(key: key);
+  final void Function()? onBackButton;
+  const OeCustomAppBar({Key? key, required this.title, this.onBackButton}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class OeCustomAppBar extends StatelessWidget {
           size: 30,
         ),
         onPressed: () {
-          onBackButton != null ? onBackButton() : Navigator.of(context).pop();
+          onBackButton != null ? onBackButton : Navigator.of(context).pop();
         },
       ),
       title: title,

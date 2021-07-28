@@ -11,13 +11,15 @@ RadioButtonItem radioButtonItemFromJson(String str) => RadioButtonItem.fromJson(
 String radioButtonItemToJson(RadioButtonItem data) => json.encode(data.toJson());
 
 class RadioButtonItem {
-    RadioButtonItem({
-        this.value,
-        this.content,
-    });
-
     dynamic value;
     Widget content;
+
+
+    RadioButtonItem({
+        this.value,
+        required this.content,
+    });
+
 
     factory RadioButtonItem.fromJson(Map<String, dynamic> json) => RadioButtonItem(
         value: json["value"],
